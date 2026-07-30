@@ -20,10 +20,10 @@ public record UpdateTaskRequestDto(
         @FutureOrPresent(message = ERROR_MESSAGE_DUE_DATE_FUTURE)
         @Nullable
         LocalDate dueDate,
-        @NotNull(message = ERROR_MESSAGE_PRIORITY)
-        TaskPriority priority,
         @NotNull(message = ERROR_MESSAGE_STATUS)
-        TaskStatus status
+        TaskStatus status,
+        @NotNull(message = ERROR_MESSAGE_PRIORITY)
+        TaskPriority priority
 ) {
     private static final String ERROR_MESSAGE_TITLE_LENGTH =
                         "Title must be between 1 to 255 characters";

@@ -50,6 +50,7 @@ public class TaskServiceImpl implements TaskService {
         task.setTitle(request.title());
         task.setDescription(request.description());
         task.setDueDate(request.dueDate());
+        task.setStatus(request.status());
         task.setPriority(request.priority());
         task.setUpdated(Instant.now());
 
